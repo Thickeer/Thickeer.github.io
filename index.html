@@ -12,6 +12,7 @@
             var rnd = parseInt(Math.random() * 2);
             var urls = new Array("https://sojump.com/jq/11459550.aspx", "https://www.baidu.com");
             //alert(rnd);
+            document.getElementById("result").innerHTML = "正在自动为您跳转到问卷页面，请稍等。如果长时间未响应，请<a href=\""+ urls[rnd] +"\">直接访问</a>...";
             window.location.href = urls[rnd];
         })
     </script>
@@ -21,13 +22,12 @@
     <div style="
             position: absolute;
             top: 35%;
-            left:35%;
             -webkit-transform: translateY(-50%);
             -moz-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             -o-transform: translateY(-50%);
             transform: translateY(-50%);">
-        <p style="text-align:center; font-size:20px;">正在跳转到问卷页面，请稍等...</p>
+        <p id="result" style="text-align:center; font-size:20px;">您的浏览器不支持Javascript，请开启Javascript后重试。</p>
     </div>
 </body>
 </html>
